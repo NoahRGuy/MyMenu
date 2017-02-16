@@ -1,6 +1,6 @@
 require 'bcrypt'
 class User < ApplicationRecord
-	include bcrypt
+	include BCrypt
 
 	has_many :menus
 

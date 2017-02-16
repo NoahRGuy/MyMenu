@@ -1,0 +1,11 @@
+<%= render 'sessions/errors' %>
+
+<h2> Register </h2>
+
+<%= form_for @user, url: { action: "create"} do |f| %>
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+	<%= f.label :password %>
+	<%= f.password :password_hash %>
+	<%= f.submit "Register" %>
+<% end %>
