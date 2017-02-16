@@ -15,9 +15,11 @@
   			<% if current_user %>
   				<%= link_to 'Logout', logout_path %> | <%= link_to 'New Menu', new_menu_path %> | <span id='user-info'><%= current_user.username %> </span>
   			<% else %>
-  				<%= link_to 'Register', new_user_path %> |  <%= link_to 'Login', sessions_new_path, id: 'login-link', remote: true %>
+  				<%= link_to 'Register', new_user_path %> |  <%= link_to 'Login', sessions_new_path, id: 'login-link'  %>
   			<% end %>
   		</nav>
-    <%= yield %>
+      <div id="container">
+        <%= yield %>
+      </div>
   </body>
 </html>

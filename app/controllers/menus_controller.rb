@@ -1,10 +1,12 @@
 class MenusController < ApplicationController
 
 	def new
+		authorize
 		@menu = Menu.new
 	end
 
 	def create
+		authorize
 		@menu = Menu.new(menu_params)
 		@menu.user = current_user
 		if @menu.save

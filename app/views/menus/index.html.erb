@@ -1,0 +1,11 @@
+<h1>Menus</h1>
+<h2>Here's the menus others have created so far:</h2>
+<% if !@menus.empty? %>
+<ol>
+		<% @menus.each do |menu| %>
+		<strong><li><%= link_to menu.name, menu_path(menu) %></li></strong>
+		<% end %>
+</ol>
+<% else %>
+	<h3>No one has created any menus! Click <%= link_to 'here', new_menu_path %> to make one now!</h3>
+<% end %>

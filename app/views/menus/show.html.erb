@@ -1,0 +1,11 @@
+<h1><%= @menu.name %></h1>
+<h2>Created by: <%= @menu.user.username %></h2>
+<% if @menu.items.empty? %>
+	<h4>Your menu doesn't have any items in it yet! click <%= link_to 'here', new_menu_item_path(@menu) %> to add some!</h4>
+<% else %> 
+	<%= @menu.items.each do |item| %>
+		<h3><%= item.title %></h3>
+		<h4><%= item.price %></h4>
+		<p><%= item.description %></p>
+	<% end %>
+<% end %>
