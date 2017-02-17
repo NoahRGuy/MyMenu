@@ -8,4 +8,5 @@
 		<h4>$<%= item.price %></h4>
 		<p><%= item.description %></p>
 	<% end %>
+	<%= link_to 'Add more items!', new_menu_item_path(@menu) %>
 <% end %>
